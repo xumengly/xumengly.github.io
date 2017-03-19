@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>TVMS.jsp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script language="javascript" type="text/javascript">
+//document.onirkeypress = keyEvent;
+//document.onkeypress = keyEvent;
+var msgDisplayURL = null;		//TVMS消息展示URL
+	
+function keyEvent()	//解析机顶盒抛出的事件信息	//获取事件的消息属性（消息）
+{
+	var val=event.which?event.which:event.keyCode;	      
+	return keypress(val);
+}
+	
+function keypress(keyval)
+{
+	iPanel.ioctlWrite("printf" , " key = " + keyval + " / 0x" + keyval.toString(16) + "\n");
+	switch(keyval)
+	{
+	case 0x300: 		//响应KEY_IPTV_EVENT虚拟按键
+		dealKeyEvent();           	
+		break;
+	default:            //其他键不响应
+		//dealKeyEvent();
+		break;
+	}    
+}
+	
+function dealKeyEvent()	//捕获虚拟按键信息,若是TVMS消息事件则响应TVMS消息按键；	//若不是TVMS消息事件，则把该按键信息传递给EPG页面处理；
+{	    
+	iPanel.ioctlWrite("printf" , "###############TVMS Utility.getEvent()");
+	eval("eventJson = " + Utility.getEvent());
+	var typeStr = eventJson.type;        
+	if("EVENT_TVMS" == typeStr)	//响应TVMS消息键，展示消息页面
+	{
+		showMessage(eventJson);
+	}
+	else if ("EVENT_TVMS_ERROR" == typeStr)
+	{
+	closeMessage();
+	setKeyForSTB();
+	}
+	//其他消息不响应  
+}
+	
+function showMessage(eventJson)		//展示消息页面
+{
+	var msgCode = eventJson.msgTaskCode;
+	var msgPriority = eventJson.priority;
+	msgDisplayURL = eventJson.tvmsURL;
+	var confirmFlag = eventJson.confirmFlag;
+	//alert("event : msgCode="+msgCode+" msgPriority="+msgPriority+" msgDisplayURL="+msgDisplayURL1+ "confirmFlag="+confirmFlag);
+	var returnXml = "";
+        
+	if(top.conflictOrNot(msgPriority,confirmFlag,"TVMS"))		//展示的消息有冲突
+	{
+		//消息有冲突，根据确保情况向EPG返回信息
+		if(1==confirmFlag) //确保收到消息，需要机顶盒延迟展示
+		{
+			returnXml = "<ShowMsgNotify><MsgCode>"+msgCode+"</MsgCode><STATUS>DELAY</STATUS></ShowMsgNotify>";
+		}
+		else		//非确保消息，让机顶盒直接抛弃
+		{
+			returnXml = "<ShowMsgNotify><MsgCode>"+msgCode+"</MsgCode><STATUS>NOSHOW</STATUS></ShowMsgNotify>";    
+		}
+            
+		iPanel.ioctlWrite("printf" , returnXml);
+		Utility.sendVendorSpecificCommand(returnXml);          
+	}
+        
+	else			//冲突检测通过，进行消息展示
+	{
+		top.setParm(msgPriority,confirmFlag,"TVMS");		//设置展示相关参数
+		returnXml = "<ShowMsgNotify><MsgCode>"+msgCode+"</MsgCode><STATUS>SUCCESS</STATUS></ShowMsgNotify>";	//向机顶盒返回展示成功
+		iPanel.ioctlWrite("printf" , returnXml);
+		Utility.sendVendorSpecificCommand(returnXml);
+		var preDel = "TVMSPreDel.jsp?tvmsURL="+msgDisplayURL + "&msgPriority="+msgPriority+"&confirmFlag="+confirmFlag;
+		//document.location.href=preDel;
+		iPanel.overlayFrame.location = msgDisplayURL;  
+	}                         
+}
+
+function showMessageTest(eventJson)		//展示消息页面
+{       
+	var msgCode= "abc";
+	var msgPriority = 10;        
+	var confirmFlag = 1;
+		//msgDisplayURL = "10.html";			
+		//msgDisplayURL = "sample10.html?user=1&areaid=2";
+		//msgDisplayURL = "http://10.164.108.142:80/tvms1/roll/roll.html?user=1&areaid=2";
+		//msgDisplayURL = "http://10.164.108.142:80/tvms1/sample/sample.html?user=1&areaid=2";
+		//msgDisplayURL = "http://10.164.108.142:80/tvms1/change/change.html?user=1&areaid=2";
+		//msgDisplayURL = "http://10.164.108.130:80/tvms/3/3.html?user=1&areaid=2";
+	msgDisplayURL =   "/EPG/jsp/default/en/testDirectShowSample.html";
+		//msgDisplayURL = "setAreaColorAlpha.html";
+		//msgDisplayURL = "setAreaColorAlpha_2.html";
+	var returnXml = "";
+        
+	if(top.conflictOrNot(msgPriority,confirmFlag,"TVMS"))		//展示的消息有冲突
+	{
+		//消息有冲突，根据确保情况向EPG返回信息
+		if(1==confirmFlag) //确保收到消息，需要机顶盒延迟展示
+		{
+			returnXml = "<ShowMsgNotify><MsgCode>"+msgCode+"</MsgCode><STATUS>DELAY</STATUS></ShowMsgNotify>";
+		}
+		else		//非确保消息，让机顶盒直接抛弃
+		{
+			returnXml = "<ShowMsgNotify><MsgCode>"+msgCode+"</MsgCode><STATUS>NOSHOW</STATUS></ShowMsgNotify>";    
+		}
+		iPanel.ioctlWrite("printf" , returnXml);
+		Utility.sendVendorSpecificCommand(returnXml);          
+	}
+
+	else			//冲突检测通过，进行消息展示
+	{
+		top.setParm(msgPriority,confirmFlag,"TVMS");		//设置展示相关参数
+		returnXml = "<ShowMsgNotify><MsgCode>"+msgCode+"</MsgCode><STATUS>SUCCESS</STATUS></ShowMsgNotify>";	//向机顶盒返回展示成功
+		iPanel.ioctlWrite("printf" , returnXml);
+		Utility.sendVendorSpecificCommand(returnXml);			
+		var preDel = "TVMSPreDel.jsp?tvmsURL="+msgDisplayURL + "&msgPriority="+msgPriority+"&confirmFlag="+confirmFlag;
+		//document.location.href=preDel;
+		iPanel.overlayFrame.location = msgDisplayURL;		//展示消息页面
+	}                         
+}
+
+function closeMessage()			//关闭消息页面
+{
+	top.resetParm();	    
+}
+	
+function changeFocusToEPG()	//把焦点切换到EPG页面
+{
+	top.EPG.focus();
+}
+	
+function setSubFocus()			//把焦点设置到弹出的子页面
+{
+	if(top.isMessageShow())	iPanel.overlayFrame.focus();
+}
+
+function setKeyForSTB()
+{
+if (!top.hw_key_ctr)
+	{
+	Authentication.CTCSetConfig("key_ctrl_ex", "1");
+	}
+}
+
+function setKeyForEPG()
+{
+	Authentication.CTCSetConfig("key_ctrl_ex", "0");
+}
+
+</script>
+</head>
+<body>
+</body>
+</html>

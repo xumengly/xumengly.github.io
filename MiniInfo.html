@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+	.STYLE1 { font-size: 18px; color: #073751; }
+	.STYLE2 { font-size: 18px; color: #FFFFFF; }
+	.STYLE3 { font-size: 20px; color: #081f51; }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+var barWidth = Math.round((1298348541392 - 1298347440392) * 183 / (1298352720392 - 1298347440392));
+function init_info()
+{
+	document.getElementById("preprog").innerText = "NO EPG INFO";
+	document.getElementById("nextprog").innerText = "NO EPG INFO";
+	document.getElementById("progTime").innerText = "12:00-12:30";
+	document.getElementById("processBar").width = barWidth;
+	document.getElementById("currprog").innerText = "NO EPG INFO";
+	document.getElementById("channelName").innerText = "NO EPG INFO";
+}
+
+function clear_info() {
+	document.getElementById("preprog").innerText = "";
+	document.getElementById("nextprog").innerText = "";
+	document.getElementById("progTime").innerText = "";
+	document.getElementById("processBar").width = "0";
+	document.getElementById("currprog").innerText = "";
+	document.getElementById("channelName").innerText = "";
+}
+
+if (typeof(iPanel) != 'undefined') 
+{
+  iPanel.focusWidth = "4";
+  iPanel.defaultFocusColor = "#FCFF05";
+}
+</script>
+
+</head>
+<body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" bgcolor="transparent" style="background-Repeat:no-repeat">
+<div style="position:absolute;left:0px;top:0px;width:640px;"><img src="images/info/info_channel.jpg" width="640" height="200"></div>
+<div id="progTime" style="position:absolute;left:482px;top:8px;color:#ffffff;"></div>
+<div style="position:absolute;left:441px;top:29px;width:183px;height:20px;"><img id="processBar" src="images/info/process_bar.gif" width="0" height="20"></div>
+<div id="currprog" class="STYLE2" style="position:absolute;left:142px;top:20px;width:275px;" align="center"></div>
+<div id="channelName" class="STYLE1" style="position:absolute;left:30px;top:20px;width:110px;" align="center"></div>
+<div id="preprog" class="STYLE2" style="position:absolute;left:30px;top:100px;width:285px;"></div>
+<div id="nextprog" class="STYLE2" style="position:absolute;left:350px;top:100px;width:275px;"></div>
+</body>
+<script language="javascript" type="text/javascript">
+	init_info();
+</script>
+</html>
