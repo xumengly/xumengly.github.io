@@ -899,21 +899,6 @@ CCTV-12,http://222.174.140.242:9901/tsfile/live/0012_1.m3u8?key=txiptv&playlive=
 CCTV-13,http://221.1.210.106:8053/tsfile/live/0013_1.m3u8?key=txiptv&playlive=1&authid=0$山东菏泽 联通
 CCTV-14,http://222.174.140.242:9901/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0$山东日照 电信
 CCTV-15,http://222.174.140.242:9901/tsfile/live/0015_1.m3u8?key=txiptv&playlive=1&authid=0$山东日照 电信
-👉👉全部结束👉👉_6666,#genre#
-⑥春盈天下转播,https://ha.jmied.com/aa/aa.flv?auth_key=1661958232-0-0-3d9174957759709f8b53448167c0b6f6
-⑥春盈天下陆盒,http://223.71.206.22:30080/HK/j5/hls.m3u8
-⑥香港21:30四九,rtmp://100www.ku55.cn/zzjj123/livekj123?auth_key=2299702236-0-0-4d409d8bca97ea5ff8fd9cf763129ac1
-⑥香港21:30一七,https://ccc.jihbcr.com/live/629.m3u8
-@新熬21:30一三,https://play666.macau-lhc.live/live/mosixmark.flv
-@新熬21:30一七,https://play888.00853lhc.live/live/mosixmark.flv
-@新熬21:30三三,https://play888.00853lhc.live/live/mosixmark.flv?t=1710336821937
-@新熬21:30四九,https://play666.macau-lhc.live/live/mosixmark.flv
-@新熬21:30规范,https://play888.00853lhc.live/live/mosixmark.flv
-@老熬21:32采家,https://vdm6-hw.qunleniuniu.com/live/2032-2.flv
-@老熬21:30一三,https://vdm6-ali.hrypl168.com/live/a6.flv
-@老熬21:32播放,https://vdm6-ali.kavimmensucat.com/live/2032-2.flv
-@老熬21:32规范,https://vdm6-qq.nxfsl.com/live/2032-2.flv
-
 _9999,#genre#
 惊艳台,https://18.svi-studio.com/live/673960949860/294164781253/1.m3u8
 潘多拉,https://18.svi-studio.com/live/673960949860/294164781253/3.m3u8
