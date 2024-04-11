@@ -899,7 +899,43 @@ CCTV-12,http://222.174.140.242:9901/tsfile/live/0012_1.m3u8?key=txiptv&playlive=
 CCTV-13,http://221.1.210.106:8053/tsfile/live/0013_1.m3u8?key=txiptv&playlive=1&authid=0$山东菏泽 联通
 CCTV-14,http://222.174.140.242:9901/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0$山东日照 电信
 CCTV-15,http://222.174.140.242:9901/tsfile/live/0015_1.m3u8?key=txiptv&playlive=1&authid=0$山东日照 电信
-_9999,#genre#
+安徽池州电信,#genre#
+CCTV1-HD,http://60.174.40.117:9901/tsfile/live/0001_1.m3u8
+CCTV2-HD,http://60.174.40.117:9901/tsfile/live/0002_1.m3u8
+CCTV3-HD,http://60.174.40.117:9901/tsfile/live/0003_1.m3u8
+CCTV4-HD,http://60.174.40.117:9901/tsfile/live/0004_1.m3u8
+CCTV5-HD,http://60.174.40.117:9901/tsfile/live/0005_1.m3u8
+CCTV6-HD,http://60.174.40.117:9901/tsfile/live/0006_1.m3u8
+CCTV7-HD,http://60.174.40.117:9901/tsfile/live/0007_1.m3u8
+CCTV8-HD,http://60.174.40.117:9901/tsfile/live/0008_1.m3u8
+CCTV9-HD,http://60.174.40.117:9901/tsfile/live/0009_1.m3u8
+CCTV10-HD,http://60.174.40.117:9901/tsfile/live/0010_1.m3u8
+CCTV11-HD,http://60.174.40.117:9901/tsfile/live/0011_1.m3u8
+CCTV12-HD,http://60.174.40.117:9901/tsfile/live/0012_1.m3u8
+CCTV13-HD,http://60.174.40.117:9901/tsfile/live/0013_1.m3u8
+CCTV14-HD,http://60.174.40.117:9901/tsfile/live/0014_1.m3u8
+CCTV15-HD,http://60.174.40.117:9901/tsfile/live/0015_1.m3u8
+CCTV-体育赛事,http://60.174.40.117:9901/tsfile/live/0016_1.m3u8
+广东卫视HD,http://60.174.40.117:9901/tsfile/live/1037_1.m3u8
+深圳卫视HD,http://60.174.40.117:9901/tsfile/live/1038_1.m3u8
+北京卫视HD,http://60.174.40.117:9901/tsfile/live/1025_1.m3u8
+东方卫视HD,http://60.174.40.117:9901/tsfile/live/1026_1.m3u8
+浙江卫视HD,http://60.174.40.117:9901/tsfile/live/1031_1.m3u8
+江苏卫视HD,http://60.174.40.117:9901/tsfile/live/1029_1.m3u8
+湖南卫视HD,http://60.174.40.117:9901/tsfile/live/1030_1.m3u8
+天津卫视HD,http://60.174.40.117:9901/tsfile/live/1027_1.m3u8
+安徽卫视HD,http://60.174.40.117:9901/tsfile/live/1019_1.m3u8
+重庆卫视HD,http://60.174.40.117:9901/tsfile/live/1028_1.m3u8
+四川卫视,http://60.174.40.117:9901/tsfile/live/0123_1.m3u8
+贵州卫视,http://60.174.40.117:9901/tsfile/live/0120_1.m3u8
+山东卫视,http://60.174.40.117:9901/tsfile/live/1036_1.m3u8
+东南卫视,http://60.174.40.117:9901/tsfile/live/0137_1.m3u8
+云南卫视,http://60.174.40.117:9901/tsfile/live/0119_1.m3u8
+河南卫视,http://60.174.40.117:9901/tsfile/live/1034_1.m3u8
+江西卫视,http://60.174.40.117:9901/tsfile/live/0138_1.m3u8
+山西卫视,http://60.174.40.117:9901/tsfile/live/0118_1.m3u8
+广西卫视,http://60.174.40.117:9901/tsfile/live/0113
+密码频道,#genre#
 惊艳台,https://18.svi-studio.com/live/673960949860/294164781253/1.m3u8
 潘多拉,https://18.svi-studio.com/live/673960949860/294164781253/3.m3u8
 香蕉台,https://18.svi-studio.com/live/673960949860/294164781253/4.m3u8
@@ -966,8 +1002,6 @@ K频道欧美版,http://live.redtraffic.xyz:80/threesome.m3u8
 午夜9,http://live.redtraffic.xyz:80/milf.m3u8
 午夜9,http://live.redtraffic.xyz/milf.m3u8?fluxuslust.m3u8
 午夜10,http://live.redtraffic.xyz:80/cuckold.m3u8
-
-
 彩虹频道,https://18.svi-studio.com/live/673960949860/294164781253/1.m3u8
 superone,http://84.17.61.203:8086/udp/238.2.25.83:1234
 BigAss,http://cdn.adultiptv.net/bigass.m3u8
