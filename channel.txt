@@ -537,13 +537,6 @@ CHC家庭影院,http://123.129.161.251:8888/udp/239.253.224.152:8000
 CHC动作电影,http://123.129.161.251:8888/udp/239.253.224.153:8000
 CHC高清电影,http://123.129.161.251:8888/udp/239.253.224.154:8000
 日照电信,#genre#
-山东齐鲁,http://222.174.140.242:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
-山东影视,http://222.174.140.242:9901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
-山东体育,http://222.174.140.242:9901/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
-山东生活,http://222.174.140.242:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
-山东综艺,http://222.174.140.242:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
-山东公共,http://222.174.140.242:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
-金鹰卡通,http://222.174.140.242:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV1-综合,http://222.174.140.242:9901/tsfile/live/0002_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV2-财经,http://222.174.140.242:9901/tsfile/live/0003_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV3-综艺,http://222.174.140.242:9901/tsfile/live/0004_1.m3u8?key=txiptv&playlive=1&authid=0
@@ -559,6 +552,13 @@ CCTV11-戏曲,http://222.174.140.242:9901/tsfile/live/0011_1.m3u8?key=txiptv&pla
 CCTV12-社会与法,http://222.174.140.242:9901/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV14-少儿,http://222.174.140.242:9901/tsfile/live/0014_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV15-音乐,http://222.174.140.242:9901/tsfile/live/0015_1.m3u8?key=txiptv&playlive=1&authid=0
+山东齐鲁,http://222.174.140.242:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
+山东影视,http://222.174.140.242:9901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
+山东体育,http://222.174.140.242:9901/tsfile/live/1002_1.m3u8?key=txiptv&playlive=1&authid=0
+山东生活,http://222.174.140.242:9901/tsfile/live/1003_1.m3u8?key=txiptv&playlive=1&authid=0
+山东综艺,http://222.174.140.242:9901/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0
+山东公共,http://222.174.140.242:9901/tsfile/live/1005_1.m3u8?key=txiptv&playlive=1&authid=0
+金鹰卡通,http://222.174.140.242:9901/tsfile/live/1006_1.m3u8?key=txiptv&playlive=1&authid=0
 山东卫视,http://222.174.140.242:9901/tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0
 北京卫视,http://222.174.140.242:9901/tsfile/live/0122_1.m3u8?key=txiptv&playlive=1&authid=0
 浙江卫视,http://222.174.140.242:9901/tsfile/live/0124_1.m3u8?key=txiptv&playlive=1&authid=0
